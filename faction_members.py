@@ -1,10 +1,10 @@
 import time
 import requests
 
-from keys import torn_api
+from keys import torn_api_key
 from datetime import datetime, timezone
 
-API_KEY = torn_api
+API_KEY = torn_api_key
 FACTION_ID = 50433
 URL = f"https://api.torn.com/v2/faction/{FACTION_ID}/members?striptags=true&key={API_KEY}"
 

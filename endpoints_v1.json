@@ -1,0 +1,8 @@
+{
+  "user": "https://api.torn.com/user/{user_id}?selections={selections}&key={api_key}",
+  "property": "https://api.torn.com/property/{property_id}?selections={selections}&key={api_key}",
+  "faction": "https://api.torn.com/faction/{faction_id}?selections={selections}&key={api_key}",
+  "company": "https://api.torn.com/company/{company_id}?selections={selections}&key={api_key}",
+  "market": "https://api.torn.com/market?selections={selections}&key={api_key}",
+  "torn": "https://api.torn.com/torn/?selections={selections}&key={api_key}"
+}
