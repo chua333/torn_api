@@ -1,0 +1,5 @@
+{
+  "faction": "https://api.torn.com/{faction}/{faction_id}?selections={selections}&key={api_key}",
+  "user": "https://api.torn.com/user/{user_id}?selections={selections}&key={api_key}",
+  "company": "https://api.torn.com/company/{company_id}?selections={selections}&key={api_key}"
+}
