@@ -20,6 +20,9 @@ class Faction:
             selections (str, optional): Extra selections to include (default is "").
         """
         try:
+            self.faction_id = faction_id
+            self.selections = selections
+            
             with open("endpoints_v1.json", "r") as f:
                 self.endpoints = json.load(f)
 

@@ -5,20 +5,18 @@ import requests
 from keys import torn_api_key
 from datetime import datetime, timezone
 from faction import Faction
+from property import Property
 
 
 def main():
     # faction_id = input("Enter Faction ID: ")
-    faction_id = 51042
+    property_id = 3438671
     # selections = input("Enter selections (or leave blank): ")
     selections = ""
 
-    faction = Faction(faction_id=faction_id, selections=selections)
-    faction_ranks_dict = faction.get_faction_details()
-    print(faction_ranks_dict)
-
-    # # id: name
-    # all_members_dict = get_faction_details()
+    property = Property(property_id=property_id, selections=selections)
+    property_details = property.get_property_details()
+    print(property_details)
 
 
 if __name__ == "__main__":
