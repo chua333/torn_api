@@ -40,9 +40,10 @@ class Company():
         Fetch the company details from the API.
 
         Returns:
-            dict: The company details returned by the API.
+            dict: The company details returned by the API:
                 - "id" (int): Company ID
                 - "type" (int): Company type
+                - "type_name" (str): Company type name
                 - "rating" (int): Company rating
                 - "name" (str): Company name
                 - "director" (int): Company director ID
@@ -74,8 +75,52 @@ class Company():
             company_details = self.company_data.get("company", {})
 
             company_id = company_details.get("id", -1)
-            company_type = company_details.get("type", -1)
+            company_type = company_details.get("company_type", -1)
             company_rating = company_details.get("rating", -1)
+            company_index = {
+                -1: "N/A",
+                1: "Hair Salon",
+                2: "Law Firm",
+                3: "Flower Shop",
+                4: "Car Dealership",
+                5: "Clothing Store",
+                6: "Gun Shop",
+                7: "Game Shop",
+                8: "Candle Shop",
+                9: "Toy Shop",
+                10: "Adult Novelty",
+                11: "Cyber Cafe",
+                12: "Grocery Store",
+                13: "Theater",
+                14: "Sweet Shop",
+                15: "Cruise Line",
+                16: "Television Network",
+                17: "N/A",
+                18: "Zoo",
+                19: "Firework Stand",
+                20: "Property Broker",
+                21: "Furniture Store",
+                22: "Gas Station",
+                23: "Music Store",
+                24: "Nightclub",
+                25: "Pub",
+                26: "Gents Strip Club",
+                27: "Restaurant",
+                28: "Oil Rig",
+                29: "Fitness Center",
+                30: "Mechanic Shop",
+                31: "Amusement Park",
+                32: "Lingerie Store",
+                33: "Meat Warehouse",
+                34: "Farm",
+                35: "Software Corporation",
+                36: "Ladies Strip Club",
+                37: "Private Security Firm",
+                38: "Mining Corporation",
+                39: "Detective Agency",
+                40: "Logistics Management"
+            }
+            company_type_name = company_index.get(company_type, "N/A")
             company_name = company_details.get("name", "N/A")
             company_director = company_details.get("director", -1)
             employees_hired = company_details.get("employees_hired", -1)
@@ -90,6 +135,7 @@ class Company():
             return {
                 "id": company_id,
                 "type": company_type,
+                "type_name": company_type_name,
                 "rating": company_rating,
                 "name": company_name,
                 "director": company_director,
